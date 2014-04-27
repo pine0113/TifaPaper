@@ -17,6 +17,7 @@
 	
 	
 	<script src="./js/jquery-1.11.0.min.js"></script>	
+	<script src="./js/jquery.easing.1.3.js"></script>	
 	<script src="./js/bootstrap.js"></script>
 	
 	
@@ -25,13 +26,38 @@
   
   
   <script>
+  
+  $(document).ready(function() {
+    
+	 $('#title,#subTitle,#shopList,#shopList ul li,#descriptBox ul li,#descriptBox hr,#descriptBox .buttonSet').hide();
 
+	 $('#title').show('slow','easeInOutBack');
+	 $('#subTitle').delay(1000).fadeIn('fast','linear');
+	 $('#shopList').delay(1400).slideDown('slow');	 
+	 $('#shopList ul li:eq(0)').delay(2000).show('slow','easeInOutBack');	 
+	 $('#shopList ul li:eq(1)').delay(2150).show('slow','easeInOutBack');	 
+	 $('#shopList ul li:eq(2)').delay(2300).show('slow','easeInOutBack');	 
+	 $('#shopList ul li:eq(3)').delay(2450).show('slow','easeInOutBack');	 
+	 $('#shopList ul li:eq(4)').delay(2600).show('slow','easeInOutBack');	 
+	 $('#shopList ul li:eq(5)').delay(2750).show('slow','easeInOutBack');	 	 
+	 
+	 $('#descriptBox ul li:eq(0)').delay(3500).fadeIn('slow');	
+	 $('#descriptBox ul li:eq(1)').delay(3800).fadeIn('slow');	
+	 $('#descriptBox ul li:eq(2)').delay(4100).fadeIn('slow');	
+	 $('#descriptBox ul li:eq(3)').delay(4400).fadeIn('slow');	
+
+	 $('#descriptBox hr').delay(4700).show('slow');	
+	
+	 $('#descriptBox .buttonSet').delay(5000).show('slow','easeInOutBack');	
+	 
+
+});
   </script>
 
 <body>    
-	
-<h2>一人一問卷 救救鄭Tifa</h2>
-<h3>幫助製造可憐碩二論文　了解社會企業拯救世界</h3>
+
+<h2 id="title">一人一問卷 救救鄭Tifa</h2>
+<h3 id="subTitle">幫助製造可憐碩二論文　了解社會企業拯救世界</h3>
 <div class="box" id="shopList">
 <ul>
 <li><a href="http://www.leezen.com.tw/big5/main2.asp" target="_blank"><img src="./img/logo1.jpg">里仁</a></li>
@@ -45,7 +71,7 @@
 
 
 
-<div class="box" >
+<div class="box" id="descriptBox">
 <ul class="descript">
 	<li><span class="glyphicon glyphicon-search"></span>　曾在以上店家有消費的你</li>
 	<li><span class="glyphicon glyphicon-time"></span>　約3~5分鐘</li>
