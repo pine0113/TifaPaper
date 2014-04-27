@@ -17,6 +17,7 @@
 	
 	
 	<script src="./js/jquery-1.11.0.min.js"></script>	
+	<script src="./js/bootstrap.js"></script>
 	
 	
 	
@@ -33,14 +34,16 @@
 <h3>幫助製造可憐碩二論文　了解社會企業拯救世界</h3>
 <div class="box" id="shopList">
 <ul>
-<li><a href="http://www.leezen.com.tw/big5/main2.asp"><img src="./img/logo1.jpg">里仁</a></li>
-<li><a href="http://www.bigissue.tw/channel"><img src="./img/logo3.jpg">The Big Issue</a></li>
-<li><a href="https://www.facebook.com/okogreen"><img src="./img/logo5.jpg">生態綠</a></li>
-<li><a href="http://www.fruit-ice.com.tw/"><img src="./img/logo2.jpg">春一枝冰棒</a></li>
-<li><a href="http://www.pcstore.com.tw/careushop/"><img src="./img/logo4.jpg">喜憨兒烘培麵包坊</a></li>
-<li><a href="http://vps.victory.org.tw/vps/index.htm"><img src="./img/logo6.jpg">勝利加油站</a></li>
+<li><a href="http://www.leezen.com.tw/big5/main2.asp" target="_blank"><img src="./img/logo1.jpg">里仁</a></li>
+<li><a href="http://www.bigissue.tw/channel" target="_blank"><img src="./img/logo3.jpg">The Big Issue</a></li>
+<li><a href="https://www.facebook.com/okogreen" target="_blank"><img src="./img/logo5.jpg">生態綠</a></li>
+<li><a href="http://www.fruit-ice.com.tw/" target="_blank"><img src="./img/logo2.jpg">春一枝冰棒</a></li>
+<li><a href="http://www.pcstore.com.tw/careushop/" target="_blank"><img src="./img/logo4.jpg">喜憨兒烘培麵包坊</a></li>
+<li><a href="http://vps.victory.org.tw/vps/index.htm" target="_blank"><img src="./img/logo6.jpg">勝利加油站</a></li>
 </ul>
 </div>
+
+
 
 <div class="box" >
 <ul class="descript">
@@ -48,14 +51,38 @@
 	<li><span class="glyphicon glyphicon-time"></span>　約3~5分鐘</li>
 </ul>
 <ul class="descript">
-	<li><span class="glyphicon glyphicon-question-sign"></span>　<a href="https://www.facebook.com/tifa.cheng?fref=ts">鄭Tifa</a>是誰？</li>
-	<li><span class="glyphicon glyphicon-thumbs-up"></span>　借此機會了解<a href="http://www.seinsights.asia/aboutse">社會企業</a></li>
+	<li><span class="glyphicon glyphicon-question-sign" target="_blank"></span>　<a href="https://www.facebook.com/tifa.cheng?fref=ts">鄭Tifa</a>是誰？</li>
+	<li><span class="glyphicon glyphicon-thumbs-up" target="_blank"></span>　借此機會了解<a href="http://www.seinsights.asia/aboutse">社會企業</a></li>
 </ul>
 <hr style="clear:both">
 <div class="buttonSet">
-	<button class="btn btn-primary btn-lg">立馬拯救鄭Tifa</button><button class="btn btn-info btn-lg">我想幫 可是我沒有消費過耶</button>
+	<button class="btn btn-primary btn-lg">立馬拯救鄭Tifa</button><button class="btn btn-info btn-lg" data-toggle="modal" data-target="#solutionStep">我想幫 可是我沒有消費過耶</button>
 </div>
 </div>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="solutionStep" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">        
+        沒消費過怎麼辦？
+      </div>
+      <div class="modal-body">
+    
+		<h3>Step1. 前往 社會企業</h3>
+		<h3>Step2. 消費</h3>
+		<h3>Step3. 回家上網填寫問卷</h3>
+		
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary btn-lg" data-dismiss="modal">好啦 我現在就去</button>        
+      </div>
+    </div>
+  </div>
+</div>
+
 
 </body>
 </html>
