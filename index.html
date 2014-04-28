@@ -14,18 +14,16 @@
     <link href="./css/bootstrap.min.css" rel="stylesheet">
 	<link href="./css/bootstrap-theme.css" rel="stylesheet">	
 	<link href="./css/survey.css" rel="stylesheet">
+	<link href="./css/jquery.share.css" rel="stylesheet">
+	
 	
 	
 	<script src="./js/jquery-1.11.0.min.js"></script>	
-	<script src="./js/jquery.easing.1.3.js"></script>	
+	<script src="./js/jquery.easing.1.3.js"></script>
+	<script src="./js/jquery.share.js"></script>
 	<script src="./js/bootstrap.js"></script>
-	
-	
-	
-  </head>
   
-  
-  <script>
+	<script>
   
   $(document).ready(function() {
     
@@ -50,12 +48,20 @@
 	 	 
 	 $("html, body").delay(5000).animate({scrollTop:900}, '500', 'easeInOutBack', function() { });	 	
 	 $('#descriptBox .buttonSet').delay(5000).show('slow','easeInOutBack');		 	 
-
+	
+	$('#shareDiv').share({
+        networks: ['facebook','googleplus','twitter'],theme: 'square'
+    });
 });
 
-</script>
 
-<body >    
+
+</script>
+</head>
+
+
+<body >  
+ 
 
 <h2 id="title">一人一問卷 救救鄭Tifa</h2>
 <h3 id="subTitle">幫助製造可憐碩二論文　了解社會企業拯救世界</h3>
@@ -78,15 +84,15 @@
 	<li><span class="glyphicon glyphicon-time"></span>　約3~5分鐘</li>
 </ul>
 <ul class="descript">
-	<li><span class="glyphicon glyphicon-question-sign" target="_blank"></span>　<a href="https://www.facebook.com/tifa.cheng?fref=ts">鄭Tifa</a>是誰？</li>
-	<li><span class="glyphicon glyphicon-thumbs-up" target="_blank"></span>　借此機會了解<a href="http://www.seinsights.asia/aboutse">社會企業</a></li>
+	<li><span class="glyphicon glyphicon-question-sign" ></span>　<a  data-toggle="modal" data-target="#WhoIsTifa">鄭Tifa</a>是誰？</li>
+	<li><span class="glyphicon glyphicon-thumbs-up"></span>　借此機會了解<a href="http://www.seinsights.asia/aboutse"　target="_blank">社會企業</a></li>
 </ul>
 <hr style="clear:both">
 <div class="buttonSet">
 	<button class="btn btn-primary btn-lg">立馬拯救鄭Tifa</button><button class="btn btn-info btn-lg" data-toggle="modal" data-target="#solutionStep">我想幫 可是我沒有消費過耶</button>
 </div>
 </div>
-
+ 
 
 
 <!-- Modal -->
@@ -98,13 +104,36 @@
       </div>
       <div class="modal-body">
     
-		<h3>Step1. 速速前往　社會企業　ε≡ﾍ( ´∀`)ﾉ</h3>
-		<h3>Step2. 消費　　　　　　　　( ′▽`)-o$</h3>
-		<h3>Step3. 回家上網填寫問卷　　(*´∀`)~♥</h3>
+		<h3>Option1. <span class="label label-primary">複製本頁網址</span>　貼給你的親友　ε≡ﾍ( ´∀`)ﾉ</h3>
+		<h3>Option2. <span class="label label-info">分享本頁在各社群上</span> <div id="shareDiv"></div> ( ′▽`)-oFB
+		
+		 
+		</h3>
+		<h3>Option3. <span class="label label-warning">用任何方法聯絡你的親友們拜託幫填</span> (*´∀`)~♥</h3>
+		<h3>Option4. <span class="label label-success">其實偷偷的去消費一下也不錯嘛</span>　　( ´艸`)</h3>
 		
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-primary btn-lg" data-dismiss="modal">好啦 我現在就去</button>        
+        <button type="button" class="btn btn-primary btn-lg" data-dismiss="modal">好啦 我知道惹</button>        
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="WhoIsTifa" tabindex="-1" role="dialog" aria-labelledby="WhoIsTifa" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">        
+        鄭Tifa是誰
+      </div>
+      <div class="modal-body">
+    
+		<h3>成大國企所研究生一枚 <a href="https://www.facebook.com/tifa.cheng?fref=ts" class="btn btn-warning btn-lg">害羞的FB連結</a></h3>
+		<span class="label label-info">如果你想要知道研究結果的話，可以在七月底之後再跟Tifa聯絡</span>
+		
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary btn-lg" data-dismiss="modal">好啦 你這個自我推銷</button>        
       </div>
     </div>
   </div>
