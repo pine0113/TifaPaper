@@ -47,14 +47,16 @@
 	 $('#descriptBox ul li:eq(3)').delay(4400).fadeIn('slow');	
 
 	 $('#descriptBox hr').delay(4700).show('slow');	
-	
-	 $('#descriptBox .buttonSet').delay(5000).show('slow','easeInOutBack');	
-	 
+	 	 
+	 $("html, body").delay(5000).animate({scrollTop:900}, '500', 'easeInOutBack', function() { });
+	 	
+	 $('#descriptBox .buttonSet').delay(5000).show('slow','easeInOutBack');		 
 
 });
-  </script>
 
-<body>    
+</script>
+
+<body >    
 
 <h2 id="title">一人一問卷 救救鄭Tifa</h2>
 <h3 id="subTitle">幫助製造可憐碩二論文　了解社會企業拯救世界</h3>
